@@ -1,0 +1,23 @@
+.section__formulario{
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+.section__formulario form{
+    width: 80%;
+    background: #F6F6F6;
+    box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.08);
+    padding: 2rem 6rem;
+    border-radius: 1.25rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formulario__titulo{
+    font-family: 'Prata';
+    font-size: 2rem;
+    font-weight: 400;
+}
