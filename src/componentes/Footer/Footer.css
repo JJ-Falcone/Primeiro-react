@@ -1,0 +1,19 @@
+footer{
+    background: #6278F7;
+    height: 13.3125rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.redes-sociais{
+    display: flex;
+    gap: 3rem
+}
+
+.footer__creditos{
+    font-family: 'Montserrat';
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
