@@ -3,6 +3,7 @@
     padding: 2.12rem 0 2.48rem 0;
     text-align: center;
     box-sizing: border-box;
+    position: relative;
 }
 
 .time__titulo{
@@ -25,4 +26,10 @@
     display: flex;
     gap: 1.5rem;
     justify-content: center;
+}
+
+.input-cor{
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }

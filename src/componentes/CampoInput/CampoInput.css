@@ -1,4 +1,4 @@
-.campo-texto label{
+.campo-input label{
     display: block;
     margin-bottom: 0.5rem;
     font-size: 1.125rem;
@@ -8,17 +8,22 @@
     line-height: 1.375rem;
 }
 
-.campo-texto input {
+.campo-input input {
     background: white;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
     width: 100%;
     border: none;
     padding: 1.5rem;
     box-sizing: border-box;
+    height: 4rem;
 }
 
-.campo-texto input::placeholder{
+.campo-input input::placeholder{
     font-family: 'Montserrat';
     font-weight: 400;
     color: #AFAFAF;
+}
+
+.campo-color input{
+    padding: 0.5rem 1.5rem;
 }

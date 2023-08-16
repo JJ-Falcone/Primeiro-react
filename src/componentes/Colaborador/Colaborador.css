@@ -2,6 +2,7 @@
     height: 17rem;
     width: 16.375rem;
     border-radius: 0.625rem;
+    position: relative;
 }
 
 .card__superior{
@@ -41,4 +42,10 @@
     font-family: 'Montserrat';
     color: #212121;
     font-weight: 400;
+}
+
+.deletar{
+    position: absolute;
+    right: -10px;
+    top: -10px;
 }
