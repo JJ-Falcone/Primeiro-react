@@ -1,10 +1,13 @@
-import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
 import Footer from './componentes/Footer';
+import { useState } from 'react';
+
 
 function App() {
+
+  const colaboradoresRecuperados = JSON.parse(localStorage.getItem('colaboradores')) === null ? [] : JSON.parse(localStorage.getItem('colaboradores'))
 
   const times = [
     {
@@ -45,17 +48,22 @@ function App() {
     
   ]
 
-  const [colaboradores, setColaboradores] = useState([])
+  const [colaboradores, setColaboradores] = useState(colaboradoresRecuperados)
+  let colaboradoresTemporarios = colaboradoresRecuperados
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador);
+    colaboradoresTemporarios = [...colaboradoresRecuperados, colaborador]
+    localStorage.setItem('colaboradores', JSON.stringify(colaboradoresTemporarios))
     setColaboradores([...colaboradores, colaborador])
-  }
-
+  }  
+  
   return (
     <div className="App">
       <Banner></Banner>
-      <Formulario nomeDosTimes={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}></Formulario>
+
+      <Formulario nomeDosTimes={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} >
+      </Formulario>
+
       {times.map(time => <Time 
         key={time.nome} 
         nome={time.nome} 
@@ -63,6 +71,7 @@ function App() {
         corSecundaria={time.corSecundaria} 
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
       ></Time>)}
+
       <Footer></Footer>
     </div>
   );

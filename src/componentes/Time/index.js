@@ -7,7 +7,10 @@ const Time = (props) => {
             <h3 className='time__titulo'>{props.nome}</h3>
             <hr style={{borderColor: props.corPrimaria}}></hr>
             <div className='div__colaboradores'>
-            {props.colaboradores.map(colaborador => <Colaborador key={colaborador.nome} img={colaborador.img} nome={colaborador.nome} cargo={colaborador.cargo} cor={props.corPrimaria}></Colaborador>)}
+            {props.colaboradores.map(colaborador => {
+                console.log(<Colaborador key={colaborador.nome} img={colaborador.img} nome={colaborador.nome} cargo={colaborador.cargo} cor={props.corPrimaria}></Colaborador>);
+                return <Colaborador key={colaborador.nome} img={colaborador.img} nome={colaborador.nome} cargo={colaborador.cargo} cor={props.corPrimaria}></Colaborador>
+            })}
             </div>
         </section>
     )
